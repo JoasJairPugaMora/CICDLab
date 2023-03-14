@@ -19,11 +19,9 @@ pipeline {
             echo 'I succeeeded!'
         }
         unstable {
-            sh 'docker-compose down'
             echo 'I am unstable :/'
         }
         failure {
-            sh 'docker-compose down'
             echo 'I failed :('
         }
         changed {
